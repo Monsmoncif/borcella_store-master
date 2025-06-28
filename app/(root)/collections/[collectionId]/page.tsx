@@ -1,5 +1,6 @@
 import ProductCard from "@/components/ProductCard";
 import { getCollectionDetails } from "@/lib/actions/actions";
+import { ProductType } from "@/lib/types";
 import Image from "next/image";
 import React from "react";
 
