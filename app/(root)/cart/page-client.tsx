@@ -820,7 +820,7 @@ const handleCheckout = async () => {
                       </p>
                       <Trash
                         className="hover:text-red-1 cursor-pointer"
-                        onClick={() => cart.removeItem(cartItem.item._id, cartItem.color, cartItem.size)}
+                        onClick={() => cart.removeItem(cartItem.item._id)}
                       />
                     </div>
                   </div>

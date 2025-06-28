@@ -1,5 +1,5 @@
 // app/coupons/page.tsx
-import { Coupon } from "@/types"; // Define your Coupon type
+import { Coupon } from "@/lib/types"; // Define your Coupon type
 
 async function getCoupons() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/coupons`, {

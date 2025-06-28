@@ -1,5 +1,6 @@
 import ProductCard from '@/components/ProductCard'
 import { getSearchedProducts } from '@/lib/actions/actions'
+import { ProductType } from '@/lib/types'
 
 const SearchPage = async ({ params }: { params: { query: string }}) => {
   const searchedProducts = await getSearchedProducts(params.query)

@@ -95,13 +95,7 @@ const Navbar = () => {
         </Link>
 
 
-         <Link
-                 href={user ? "/wishlist" : "/sign-in"}
-         
-                className="hidden md:block lg:block p-2 text-gray-600 hover:text-primary-600 transition-colors duration-200"
-              >
-                <Heart size={20} />
-              </Link>
+       
 
         <Menu
           className="cursor-pointer lg:hidden"
