@@ -1,5 +1,6 @@
 "use client";
 
+import { ProductType } from "@/lib/types";
 import { useEffect } from "react";
 
 interface BuyNowModalProps {

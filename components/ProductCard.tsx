@@ -107,6 +107,7 @@ import Image from "next/image";
 import { assets } from "@/assets/assets";
 import Link from "next/link";
 import BuyNowModal from "./BuyNowModal";
+import { ProductType } from "@/lib/types";
 
 interface ProductCardProps {
   product: ProductType;

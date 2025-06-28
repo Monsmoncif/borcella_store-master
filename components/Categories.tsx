@@ -2,6 +2,7 @@ import { getCategories } from "@/lib/actions/actions";
 import Image from "next/image";
 import Link from "next/link";
 import { assets } from "@/assets/assets";
+import { categoryType } from "@/lib/types";
 
 const Categories = async () => {
   const categories = await getCategories();

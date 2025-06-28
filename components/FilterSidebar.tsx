@@ -131,9 +131,19 @@ import React from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { SlReload } from "react-icons/sl";
 
+type Collection = {
+  _id: string;
+  title: string;
+};
+
+type Category = {
+  _id: string;
+  title: string;
+};
+
 type Props = {
-  collections: { _id: string; title: string }[];
-  categories: { _id: string; title: string }[];
+  collections: Collection[];
+  categories: Category[];
   availableColors: string[];
   availableSizes: string[];
 };
