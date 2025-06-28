@@ -1,6 +1,7 @@
 import { getProducts } from "@/lib/actions/actions";
 import ProductCard from "./ProductCard";
 import Link from "next/link";
+import { ProductType } from "@/lib/types";
 
 const ProductList = async () => {
   const products = await getProducts();

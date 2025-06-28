@@ -29,11 +29,13 @@ const CollectionDetails = async ({
       <div className="flex  gap-3 justify-center ">
         {!collectionDetails?.products || collectionDetails.products.length === 0 ? (
   <p className="text-body-bold">No products found</p>
-) : (
-  collectionDetails.products.map((product: ProductType) => (
-    <ProductCard key={product._id} product={product} />
-  ))
-)}
+) :  (
+          <div className="flex flex-wrap justify-center gap-3 lg:gap-6">
+            {collectionDetails.products.map((product: ProductType) => (
+              <ProductCard key={product._id} product={product} />
+            ))}
+          </div>
+        )}
 
       </div>
     </div>

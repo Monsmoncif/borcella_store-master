@@ -44,7 +44,7 @@ const HeaderSlider = ({ sliders }: { sliders: SliderType[] }) => {
 
   return (
     <div
-      className="relative w-full px-2 sm:px-4"
+      className="relative w-full px-2 sm:px-4 mt-2"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -87,24 +87,16 @@ const HeaderSlider = ({ sliders }: { sliders: SliderType[] }) => {
                     href={slide.link}
                     className="px-6 py-3 bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 rounded-full text-white text-sm sm:text-base font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
                   >
-                    {slide.buttonText1 || "Shop Now"}
+                    {slide.buttonText1 || "Buy Now"}
                   </Link>
-
-                  <Link
-                    href="/shop"
-                    className="group flex items-center gap-2 font-semibold text-gray-700 hover:text-orange-600 transition-all duration-300 text-sm sm:text-base"
-                  >
-                    {slide.buttonText2 || "Learn More"}
-                    <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white group-hover:bg-orange-50 transition-all duration-300 shadow-md">
-                      <Image
-                        className="group-hover:translate-x-1 transition-transform duration-300"
-                        src={assets.arrow_icon}
-                        alt="arrow icon"
-                        width={16}
-                        height={16}
-                      />
-                    </span>
-                  </Link>
+<Link
+  href="/shop"
+  className="group inline-flex items-center gap-1 font-semibold text-gray-700 hover:text-orange-600 transition-all duration-300 text-[18px] sm:text-base relative"
+>
+  {slide.buttonText2 || "More"}
+  {/* Animated underline */}
+  <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-orange-600 group-hover:w-full transition-all duration-300 ease-out"></span>
+</Link>
                 </div>
               </div>
 
@@ -146,33 +138,7 @@ const HeaderSlider = ({ sliders }: { sliders: SliderType[] }) => {
       {/* Navigation Arrows */}
       {sliders.length > 1 && (
         <>
-          <button
-            onClick={() =>
-              setCurrent((prev) => (prev - 1 + sliders.length) % sliders.length)
-            }
-            className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-2 sm:p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
-            aria-label="Previous slide"
-          >
-            <Image
-              src={assets.arrow_icon}
-              alt="Previous"
-              width={20}
-              height={20}
-              className="rotate-180"
-            />
-          </button>
-          <button
-            onClick={() => setCurrent((prev) => (prev + 1) % sliders.length)}
-            className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-2 sm:p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
-            aria-label="Next slide"
-          >
-            <Image
-              src={assets.arrow_icon}
-              alt="Next"
-              width={20}
-              height={20}
-            />
-          </button>
+       
         </>
       )}
     </div>

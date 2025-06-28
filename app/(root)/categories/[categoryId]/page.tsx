@@ -79,7 +79,7 @@ const CategoryDetailsPage = async ({ params }: { params: { categoryId: string } 
             <p className="text-body-bold text-grey-2">No products found in this category</p>
           </div>
         ) : (
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+          <div className="flex flex-wrap justify-center gap-3 lg:gap-6">
             {categoryDetails.products.map((product: ProductType) => (
               <ProductCard key={product._id} product={product} />
             ))}
