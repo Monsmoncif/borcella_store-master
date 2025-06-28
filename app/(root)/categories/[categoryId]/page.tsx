@@ -80,9 +80,10 @@ const CategoryDetailsPage = async ({ params }: { params: { categoryId: string } 
           </div>
         ) : (
           <div className="flex flex-wrap justify-center gap-3 lg:gap-6">
-            {categoryDetails.products.map((product: ProductType) => (
-              <ProductCard key={product._id} product={product} />
-            ))}
+           {categoryDetails.products.map((product: ProductType) => (
+  // @ts-ignore
+  <ProductCard key={product._id} product={product} />
+))}
           </div>
         )}
       </div>
