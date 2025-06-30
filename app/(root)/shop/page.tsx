@@ -175,7 +175,7 @@ const AllProducts = async ({ searchParams }: { searchParams: SearchParams }) => 
                 </p>
               </div>
             ) : (
-              <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 md:gap-6 lg:gap-8 px-1">
+              <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 md:gap-6 lg:gap-20 px-1">
                 {filteredProducts.map((product) => {
                   const currentPrice = product.promotion 
                     ? product.price * (1 - parseFloat(product.promotion) / 100)

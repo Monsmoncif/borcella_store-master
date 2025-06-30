@@ -118,22 +118,22 @@ const ProductCard = ({ product }: ProductCardProps) => {
 
   return (
     <>
-      <div className="flex flex-col items-start gap-1 w-[200px]  lg:w-[230px] cursor-pointer bg-slate-50/80 backdrop-blur-md border border-gray-200 shadow-md rounded-2xl overflow-hidden transition-transform duration-300 hover:shadow-xl hover:-translate-y-1 p-3">
+      <div className="flex flex-col items-start gap-1 w-[190px]  lg:w-[230px] cursor-pointer bg-slate-50/80 backdrop-blur-md border border-gray-200 shadow-md rounded-2xl overflow-hidden transition-transform duration-300 hover:shadow-xl hover:-translate-y-1 p-3">
         <Link href={`/products/${product._id}`} className="w-full">
           <div className="cursor-pointer group relative bg-gray-500/10 rounded-lg w-full h-52 flex items-center justify-center">
             <Image
               src={product.media[0]}
               alt={product.title}
-              className="group-hover:scale-105 transition object-cover w-4/5 h-4/5 md:w-full md:h-full"
+              className="group-hover:scale-105 transition object-cover w-5/5 h-5/5 md:w-full md:h-full"
               width={800}
               height={800}
             />
           </div>
-        </Link>
+        
 
         <p className="md:text-base font-bold pt-2 w-full truncate">{product.title}</p>
         <p className="w-full text-xs text-gray-500/70  truncate">{product.description}</p>
-
+</Link>
         <div className="flex items-center gap-2">
           <p className="text-xs">{4.5}</p>
           <div className="flex items-center gap-0.5">
